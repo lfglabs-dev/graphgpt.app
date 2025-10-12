@@ -58,7 +58,7 @@ export default function Terms() {
         <Badge>Terms of Use</Badge>
         <h1
           id="terms-overview"
-          className="mt-2 inline-block bg-gradient-to-br from-text to-text-secondary bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-6xl md:text-6xl dark:from-gray-50 dark:to-gray-300"
+          className="mt-2 inline-block bg-gradient-to-br from-text to-text-secondary bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-6xl md:text-6xl dark:from-[rgb(var(--color-foreground))] dark:to-[rgb(var(--color-muted-foreground))]"
         >
           <Balancer>Service Terms & Conditions</Balancer>
         </h1>
@@ -76,7 +76,7 @@ export default function Terms() {
         <div className="prose prose-gray max-w-none dark:prose-invert">
           <p>ReLens AI &ndash; Terms of Use</p>
 
-          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-gray-50">
+          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-[rgb(var(--color-foreground))]">
             1. Scope and Parties
           </h3>
 
@@ -105,7 +105,7 @@ export default function Terms() {
             expressly agreed to them in writing.
           </p>
 
-          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-gray-50">
+          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-[rgb(var(--color-foreground))]">
             2. Services Provided by ReLens AI
           </h3>
 
@@ -150,7 +150,7 @@ export default function Terms() {
             improvements, or results from using the Service.
           </p>
 
-          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-gray-50">
+          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-[rgb(var(--color-foreground))]">
             3. Customer Obligations
           </h3>
 
@@ -174,7 +174,7 @@ export default function Terms() {
             contract for cause pursuant to Section 7.3 below.
           </p>
 
-          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-gray-50">
+          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-[rgb(var(--color-foreground))]">
             4. Intellectual Property and Data
           </h3>
 
@@ -203,7 +203,7 @@ export default function Terms() {
             to retain it.
           </p>
 
-          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-gray-50">
+          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-[rgb(var(--color-foreground))]">
             5. Fees, Payment Terms, and Set-off
           </h3>
 
@@ -240,7 +240,7 @@ export default function Terms() {
             final legal judgment.
           </p>
 
-          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-gray-50">
+          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-[rgb(var(--color-foreground))]">
             6. Limitation of Liability
           </h3>
 
@@ -283,7 +283,7 @@ export default function Terms() {
             such breach.
           </p>
 
-          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-gray-50">
+          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-[rgb(var(--color-foreground))]">
             7. Term and Termination
           </h3>
 
@@ -336,7 +336,7 @@ export default function Terms() {
             period, except for data we must retain by law.
           </p>
 
-          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-gray-50">
+          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-[rgb(var(--color-foreground))]">
             8. Governing Law and Jurisdiction
           </h3>
 
@@ -357,7 +357,7 @@ export default function Terms() {
             appropriate jurisdiction if necessary.
           </p>
 
-          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-gray-50">
+          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-[rgb(var(--color-foreground))]">
             9. Reference Use
           </h3>
 
@@ -374,7 +374,7 @@ export default function Terms() {
             this context.
           </p>
 
-          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-gray-50">
+          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-[rgb(var(--color-foreground))]">
             10. Final Provisions
           </h3>
 

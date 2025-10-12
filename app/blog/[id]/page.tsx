@@ -112,7 +112,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         <header className="mb-8 text-center">
           <div className="flex flex-col items-center justify-center">
             <Badge>Article</Badge>
-            <h1 className="mb-4 inline-block bg-gradient-to-br from-text to-text-secondary bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-6xl md:text-6xl dark:from-gray-50 dark:to-gray-300">
+            <h1 className="mb-4 inline-block bg-gradient-to-br from-text to-text-secondary bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-6xl md:text-6xl dark:from-[rgb(var(--color-foreground))] dark:to-[rgb(var(--color-muted-foreground))]">
               {post.frontmatter.title}
             </h1>
           </div>

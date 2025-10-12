@@ -54,8 +54,8 @@ export const Navigation: FC<NavigationProps> = ({ sticky = true }) => {
           : "relative",
         open === true ? "h-auto" : "h-18",
         (scrolled || open) && sticky === true
-          ? "backdrop-blur-nav max-w-3xl border-gray-600 bg-background/90 shadow-xl shadow-black/10"
-          : "bg-white/0"
+          ? "backdrop-blur-nav max-w-3xl border-[rgb(var(--color-border))] bg-[rgb(var(--color-background))]/90 shadow-xl shadow-black/10"
+          : "bg-transparent"
       )}
     >
       <div className="w-full md:my-auto">

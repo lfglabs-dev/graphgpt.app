@@ -91,7 +91,7 @@ export default async function BlogPage() {
           <Badge>Blog</Badge>
           <h1
             id="blog-title"
-            className="mt-2 inline-block bg-gradient-to-br from-text to-text-secondary bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-6xl md:text-6xl dark:from-gray-50 dark:to-gray-300"
+            className="mt-2 inline-block bg-gradient-to-br from-text to-text-secondary bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-6xl md:text-6xl dark:from-[rgb(var(--color-foreground))] dark:to-[rgb(var(--color-muted-foreground))]"
           >
             AI & Content Strategy Insights
           </h1>

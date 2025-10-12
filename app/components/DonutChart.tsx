@@ -157,9 +157,9 @@ const ChartTooltip = ({
           // base
           "rounded px-2 py-1 text-xs shadow-md",
           // border color
-          "border border-gray-200 dark:border-gray-800",
+          "border border-[rgb(var(--color-border))]",
           // background color
-          "bg-white dark:bg-gray-950",
+          "bg-[rgb(var(--color-surface))]",
         )}
       >
         {payload.map(({ value, category }, index) => (
@@ -167,10 +167,10 @@ const ChartTooltip = ({
             key={`id-${index}`}
             className="flex items-center justify-between gap-2"
           >
-            <span className="whitespace-nowrap text-gray-700 dark:text-gray-300">
+            <span className="whitespace-nowrap text-gray-700 text-[rgb(var(--color-muted-foreground))]">
               {category}
             </span>
-            <span className="whitespace-nowrap font-medium tabular-nums text-gray-900 dark:text-gray-50">
+            <span className="whitespace-nowrap font-medium tabular-nums text-[rgb(var(--color-foreground))]">
               {valueFormatter(value)}
             </span>
           </div>
@@ -313,7 +313,7 @@ const DonutChart = React.forwardRef<HTMLDivElement, DonutChartProps>(
             <ReChartsDonutChart>
               {isDonut && showLabel && (
                 <text
-                  className="fill-gray-900 text-sm dark:fill-gray-50"
+                  className="text-sm fill-[rgb(var(--color-foreground))]"
                   textAnchor="middle"
                   dominantBaseline="middle"
                   x="50%"
@@ -324,7 +324,7 @@ const DonutChart = React.forwardRef<HTMLDivElement, DonutChartProps>(
               )}
               <Pie
                 className={cx(
-                  "[&_.recharts-pie-sector]:outline-hidden stroke-white dark:stroke-gray-950",
+                  "[&_.recharts-pie-sector]:outline-hidden stroke-[rgb(var(--color-surface))]",
                   onValueChange ? "cursor-pointer" : "cursor-default",
                 )}
                 data={pieData}

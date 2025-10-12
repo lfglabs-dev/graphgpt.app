@@ -38,7 +38,7 @@ function CustomHeading(props: any) {
 
 export const H1 = ({ children }: React.HTMLProps<HTMLHeadingElement>) => (
   <CustomHeading
-    className="text-3xl font-bold normal-case tracking-tight text-text-secondary-dark sm:text-4xl dark:text-gray-50"
+    className="text-3xl font-bold normal-case tracking-tight text-text-secondary-dark sm:text-4xl dark:text-[rgb(var(--color-foreground))]"
     level={1}
   >
     {children}
@@ -47,7 +47,7 @@ export const H1 = ({ children }: React.HTMLProps<HTMLHeadingElement>) => (
 
 export const H2 = ({ children }: React.HTMLProps<HTMLHeadingElement>) => (
   <CustomHeading
-    className="mb-4 text-lg font-semibold normal-case tracking-tight text-text-secondary-dark dark:text-gray-50"
+    className="mb-4 text-lg font-semibold normal-case tracking-tight text-text-secondary-dark dark:text-[rgb(var(--color-foreground))]"
     level={2}
   >
     {children}
@@ -56,7 +56,7 @@ export const H2 = ({ children }: React.HTMLProps<HTMLHeadingElement>) => (
 
 export const H3 = ({ children }: React.HTMLProps<HTMLHeadingElement>) => (
   <CustomHeading
-    className="mb-2 font-semibold normal-case tracking-tight text-text-secondary-dark dark:text-gray-50"
+    className="mb-2 font-semibold normal-case tracking-tight text-text-secondary-dark dark:text-[rgb(var(--color-foreground))]"
     level={3}
   >
     {children}
@@ -117,7 +117,7 @@ export const Ul = (props: React.HTMLAttributes<HTMLUListElement>) => (
 
 export const Bold = (props: React.HTMLAttributes<HTMLSpanElement>) => (
   <span
-    className="font-semibold text-text-secondary-dark dark:text-gray-50"
+    className="font-semibold text-text-secondary-dark dark:text-[rgb(var(--color-foreground))]"
     {...props}
   />
 );
@@ -177,7 +177,7 @@ export const BlogEntry = ({
   };
 
   return (
-    <article className="relative my-20 flex flex-col justify-center gap-x-14 border-b border-light md:flex-row dark:border-gray-800">
+    <article className="relative my-20 flex flex-col justify-center gap-x-14 border-b border-light md:flex-row dark:border-[rgb(var(--color-border))]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostSchema) }}
@@ -212,7 +212,7 @@ export const ArticleImage = ({
     alt={alt}
     width={width}
     height={height}
-    className="mb-10 overflow-hidden rounded-xl shadow-md shadow-black/15 ring-1 ring-light/50 dark:ring-gray-800"
+    className="mb-10 overflow-hidden rounded-xl shadow-md shadow-black/15 ring-1 ring-light/50 dark:ring-[rgb(var(--color-border))]"
     {...props}
   />
 );

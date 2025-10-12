@@ -39,6 +39,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <NextChatSDKBootstrap baseUrl={baseURL} />
+        <ThemeBootstrap />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -68,9 +69,10 @@ function NextChatSDKBootstrap({ baseUrl }: { baseUrl: string }) {
                   mutation.target === htmlElement
                 ) {
                   const attrName = mutation.attributeName;
-                  if (attrName && attrName !== "suppresshydrationwarning") {
-                    htmlElement.removeAttribute(attrName);
-                  }
+                  // Preserve critical attributes like class and data-theme
+                  if (!attrName) return;
+                  const preserve = ["suppresshydrationwarning", "class", "data-theme"];
+                  if (preserve.includes(attrName)) return;
                 }
               });
             });
@@ -183,5 +185,24 @@ function NextChatSDKBootstrap({ baseUrl }: { baseUrl: string }) {
           ")()"}
       </script>
     </>
+  );
+}
+
+function ThemeBootstrap() {
+  return (
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `(() => {
+  try {
+    const stored = localStorage.getItem('theme');
+    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const theme = stored || (systemDark ? 'dark' : 'light');
+    const root = document.documentElement;
+    if (theme === 'dark') root.classList.add('dark');
+    else root.classList.remove('dark');
+  } catch {}
+})();`,
+      }}
+    />
   );
 }

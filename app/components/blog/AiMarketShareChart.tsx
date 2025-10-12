@@ -37,10 +37,10 @@ const data: DataItem[] = [
 export const AiMarketShareChart = () => {
   return (
     <div className="mx-auto max-w-2xl pt-4">
-      <h3 className="mb-4 text-center text-lg font-medium text-gray-900 dark:text-gray-50">
+      <h3 className="mb-4 text-center text-lg font-medium text-[rgb(var(--color-foreground))]">
         AI Chatbot Market Share (Usage)
       </h3>
-      <p className="text-center text-sm text-gray-700 dark:text-gray-300">
+      <p className="text-center text-sm text-[rgb(var(--color-muted-foreground))]">
         Market distribution by platform
       </p>
       <DonutChart

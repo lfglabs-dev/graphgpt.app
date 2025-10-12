@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     <footer id="footer">
       <div className="mx-auto max-w-6xl px-3 pb-8 ">
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-light pt-8  sm:flex-row dark:border-gray-800">
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-light pt-8  sm:flex-row dark:border-[rgb(var(--color-border))]">
           <a
             href={siteConfig.relensUrl}
             className="dark:text-secondary-light text-sm leading-5 text-text-secondary-semi-light"
