@@ -1,11 +1,13 @@
 import type { Config } from "tailwindcss";
 
-const primary = "#3090fe";
-const background = "#edf2f5";
-const light = "#e6f6ff";
+// All colors flow from CSS variables for easy theming
+const primary = "rgb(var(--color-primary))";
+const background = "rgb(var(--color-background))";
+const light = "rgb(var(--color-light))";
 
 const config: Config = {
-  darkMode: "selector",
+  // Use class strategy; .dark on <html> or <body>
+  darkMode: "class",
   content: [
     "./app/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -17,13 +19,18 @@ const config: Config = {
       colors: {
         primary,
         background,
+        foreground: "rgb(var(--color-foreground))",
+        surface: "rgb(var(--color-surface))",
+        border: "rgb(var(--color-border))",
         white: "#ffffff",
         light,
-        "text-secondary-light": "#707069",
-        "text-secondary-semi-light": "#5c5c55",
-        "text-secondary": "#483c33",
-        "text-secondary-dark": "#20201d",
-        text: "#141413",
+        // Map text tokens to CSS vars for light/dark parity
+        "text-secondary-light": "rgb(var(--color-text-secondary-light))",
+        "text-secondary-semi-light": "rgb(var(--color-text-secondary-semi-light))",
+        "text-secondary": "rgb(var(--color-text-secondary))",
+        "text-secondary-dark": "rgb(var(--color-text-secondary-dark))",
+        text: "rgb(var(--color-text))",
+        "muted-foreground": "rgb(var(--color-muted-foreground))",
       },
       fontFamily: {
         handwriting: ["var(--font-handwriting)", "cursive"],
@@ -35,12 +42,20 @@ const config: Config = {
               borderLeftColor: primary,
             },
             "ul > li::marker": {
-              color: "#141413",
+              color: "rgb(var(--color-text))",
             },
-            color: "#141413",
+            color: "rgb(var(--color-text))",
             h2: {
-              color: "#483c33",
+              color: "rgb(var(--color-text-secondary))",
             },
+          },
+        },
+        invert: {
+          css: {
+            blockquote: {
+              borderLeftColor: primary,
+            },
+            color: "rgb(var(--color-foreground))",
           },
         },
       }),

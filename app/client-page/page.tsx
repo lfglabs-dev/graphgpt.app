@@ -12,7 +12,7 @@ export default function HomePage() {
         </p>
         <Link 
           href="/"
-          className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
+          className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[rgb(var(--color-foreground))]/90 dark:hover:bg-[rgb(var(--color-foreground))]/80 font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
         >
           Go to the main page
         </Link>

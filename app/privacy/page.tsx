@@ -58,7 +58,7 @@ export default function Privacy() {
         <Badge>Privacy Policy</Badge>
         <h1
           id="privacy-overview"
-          className="mt-2 inline-block bg-gradient-to-br from-text to-text-secondary bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-6xl md:text-6xl dark:from-gray-50 dark:to-gray-300"
+          className="mt-2 inline-block bg-gradient-to-br from-text to-text-secondary bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-6xl md:text-6xl dark:from-[rgb(var(--color-foreground))] dark:to-[rgb(var(--color-muted-foreground))]"
         >
           <Balancer>Data Protection & Privacy Policy</Balancer>
         </h1>
@@ -89,7 +89,7 @@ export default function Privacy() {
             as applicable.
           </p>
 
-          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-gray-50">
+          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-[rgb(var(--color-foreground))]">
             1. Provider
           </h3>
           <p>
@@ -108,7 +108,7 @@ export default function Privacy() {
             <p>Email: contact@relens.ai</p>
           </div>
 
-          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-gray-50">
+          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-[rgb(var(--color-foreground))]">
             2. Data Processing to Enable Use
           </h3>
           <p>
@@ -132,7 +132,7 @@ export default function Privacy() {
             para. 1 sentence 1 lit. f GDPR.
           </p>
 
-          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-gray-50">
+          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-[rgb(var(--color-foreground))]">
             3. Data Processing upon Request
           </h3>
           <p>
@@ -142,7 +142,7 @@ export default function Privacy() {
             certain data needs to be provided.
           </p>
 
-          <h3 className="mb-4 mt-8 text-lg font-semibold text-text-secondary-dark dark:text-gray-50">
+          <h3 className="mb-4 mt-8 text-lg font-semibold text-text-secondary-dark dark:text-[rgb(var(--color-foreground))]">
             3.1. Demo Booking and Contact
           </h3>
           <p>
@@ -170,7 +170,7 @@ export default function Privacy() {
             (legitimate interest in providing the service).
           </p>
 
-          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-gray-50">
+          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-[rgb(var(--color-foreground))]">
             4. Data Processing for Service Optimization
           </h3>
           <p>
@@ -193,7 +193,7 @@ export default function Privacy() {
             Ghostery to prevent tracking.
           </p>
 
-          <h3 className="mb-4 mt-8 text-lg font-semibold text-text-secondary-dark dark:text-gray-50">
+          <h3 className="mb-4 mt-8 text-lg font-semibold text-text-secondary-dark dark:text-[rgb(var(--color-foreground))]">
             4.1. PostHog Analytics
           </h3>
           <p>
@@ -229,7 +229,7 @@ export default function Privacy() {
             place.
           </p>
 
-          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-gray-50">
+          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-[rgb(var(--color-foreground))]">
             5. Data Transfer
           </h3>
           <p>
@@ -238,7 +238,7 @@ export default function Privacy() {
             another legal basis applies.
           </p>
 
-          <h3 className="mb-4 mt-8 text-lg font-semibold text-text-secondary-dark dark:text-gray-50">
+          <h3 className="mb-4 mt-8 text-lg font-semibold text-text-secondary-dark dark:text-[rgb(var(--color-foreground))]">
             5.1. Data Transfer to Non-EU Countries
           </h3>
           <p>
@@ -249,7 +249,7 @@ export default function Privacy() {
             under Art. 49 GDPR.
           </p>
 
-          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-gray-50">
+          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-[rgb(var(--color-foreground))]">
             6. Storage Duration
           </h3>
           <p>
@@ -257,7 +257,7 @@ export default function Privacy() {
             for which it was processed, or until legal retention periods expire.
           </p>
 
-          <h3 className="mb-4 mt-8 text-lg font-semibold text-text-secondary-dark dark:text-gray-50">
+          <h3 className="mb-4 mt-8 text-lg font-semibold text-text-secondary-dark dark:text-[rgb(var(--color-foreground))]">
             6.1. Security Measures
           </h3>
           <p>
@@ -265,7 +265,7 @@ export default function Privacy() {
             against unauthorized access and loss.
           </p>
 
-          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-gray-50">
+          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-[rgb(var(--color-foreground))]">
             7. Your Rights
           </h3>
           <p>
@@ -282,7 +282,7 @@ export default function Privacy() {
             authority if you reside in the EU.
           </p>
 
-          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-gray-50">
+          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-[rgb(var(--color-foreground))]">
             8. Right to Object
           </h3>
           <p>
@@ -291,7 +291,7 @@ export default function Privacy() {
             para. 1 lit. f GDPR).
           </p>
 
-          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-gray-50">
+          <h3 className="mb-6 mt-12 text-xl font-bold text-text-secondary-dark dark:text-[rgb(var(--color-foreground))]">
             9. Changes to the Privacy Policy
           </h3>
           <p>

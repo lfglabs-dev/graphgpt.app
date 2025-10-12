@@ -3,15 +3,40 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
+
+  /* Core color tokens (RGB channels) */
+  --color-background: 255 255 255; /* #ffffff */
+  --color-foreground: 23 23 23; /* #171717 */
+  --color-primary: 48 144 254; /* #3090fe */
+  --color-light: 230 246 255; /* #e6f6ff */
+
+  /* Surfaces and borders */
+  --color-surface: 255 255 255; /* cards, panels */
+  --color-border: 229 231 235; /* tailwind gray-200 */
+
+  /* Muted */
+  --color-muted-foreground: 107 114 128; /* tailwind gray-500 */
+
+  --color-text: 20 20 19; /* #141413 */
+  --color-text-secondary-light: 112 112 105; /* #707069 */
+  --color-text-secondary-semi-light: 92 92 85; /* #5c5c55 */
+  --color-text-secondary: 72 60 51; /* #483c33 */
+  --color-text-secondary-dark: 32 32 29; /* #20201d */
+
+  /* Legacy aliases for arbitrary color utilities already in use */
+  --background: rgb(var(--color-background));
+  --foreground: rgb(var(--color-foreground));
+  --primary-color: rgb(var(--color-primary));
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  color-scheme: dark;
+  --color-background: 10 10 10; /* #0a0a0a */
+  --color-foreground: 237 237 237; /* #ededed */
+  --color-surface: 10 10 10; /* near bg for subtle panels */
+  --color-border: 31 41 55; /* tailwind gray-800 */
+  --color-muted-foreground: 156 163 175; /* tailwind gray-400 */
 }
 
 @theme inline {
@@ -22,7 +47,7 @@
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -36,10 +61,7 @@ body {
   src: url("/fonts/NanumPenScript.woff2") format("woff2");
 }
 
-body {
-  background-color: var(--background);
-  color: var(--foreground);
-}
+
 
 .backdrop-blur {
   -webkit-backdrop-filter: blur(3px);
@@ -50,7 +72,7 @@ body {
 .backdrop-blur-nav {
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
-  background-color: color-mix(in srgb, var(--background) 80%, transparent);
+  background-color: color-mix(in srgb, var(--background) 75%, transparent);
 }
 
 code {

@@ -33,13 +33,13 @@ const buttonVariants = tv({
       ],
       secondary: [
         // border
-        "border-gray-300 dark:border-gray-800",
+        "border-[rgb(var(--color-border))]",
         // text color
-        "text-text-secondary-dark dark:text-gray-50",
+        "text-text-secondary-dark dark:text-[rgb(var(--color-foreground))]",
         // background color
-        "bg-white dark:bg-gray-950",
+        "bg-[rgb(var(--color-surface))]",
         //hover color
-        "hover:bg-gray-50 dark:hover:bg-gray-900/60",
+        "hover:bg-[rgb(var(--color-surface))]/90",
         // disabled
         "disabled:text-secondary-light",
         "disabled:dark:text-text-secondary",
@@ -50,14 +50,14 @@ const buttonVariants = tv({
         // border
         "border-transparent",
         // text color
-        "text-text-secondary-dark dark:text-gray-50",
+        "text-text-secondary-dark dark:text-[rgb(var(--color-foreground))]",
         // background color
-        "bg-light dark:bg-gray-900",
+        "bg-light dark:bg-[rgb(var(--color-surface))]",
         // hover color
-        "hover:bg-gray-300/70 dark:hover:bg-gray-800/80",
+        "hover:bg-gray-300/70 dark:hover:bg-[rgb(var(--color-border))]/20",
         // disabled
         "disabled:text-secondary-light disabled:bg-light",
-        "disabled:dark:bg-gray-800 disabled:dark:text-text-secondary",
+        "disabled:dark:bg-[rgb(var(--color-border))]/20 disabled:dark:text-text-secondary",
       ],
       ghost: [
         // base
@@ -65,9 +65,9 @@ const buttonVariants = tv({
         // border
         "border-transparent",
         // text color
-        "text-text-secondary-dark dark:text-gray-50",
+        "text-text-secondary-dark dark:text-[rgb(var(--color-foreground))]",
         // hover color
-        "bg-transparent hover:bg-light dark:hover:bg-gray-800/80",
+        "bg-transparent hover:bg-light dark:hover:bg-[rgb(var(--color-border))]/20",
         // disabled
         "disabled:text-secondary-light",
         "disabled:dark:text-text-secondary",
