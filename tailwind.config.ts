@@ -1,11 +1,12 @@
 import type { Config } from "tailwindcss";
 
-const primary = "#3090fe";
-const background = "#edf2f5";
-const light = "#e6f6ff";
+// Fantasy-emerald leaning palette (aligned with thread vibe)
+const primary = "#047857"; // emerald-700 (keeps good contrast with white text)
+const background = "#fbfaf6"; // warm parchment-white
+const light = "#d1fae5"; // subtle emerald tint for light button variant
 
 const config: Config = {
-  darkMode: "selector",
+  darkMode: "media",
   content: [
     "./app/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -35,11 +36,14 @@ const config: Config = {
               borderLeftColor: primary,
             },
             "ul > li::marker": {
-              color: "#141413",
+              color: "var(--foreground)",
             },
-            color: "#141413",
+            color: "var(--foreground)",
             h2: {
-              color: "#483c33",
+              color: "var(--foreground)",
+            },
+            strong: {
+              color: "var(--foreground)",
             },
           },
         },

@@ -3,16 +3,50 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --foreground-secondary: #707069;
+  /* Light theme (warm parchment, fantasy-leaning) */
+  --background: #fbfaf6;
+  --foreground: #0b1220;
+  --foreground-secondary: #475569;
+
+  /* Accent */
+  --primary-color: #047857; /* emerald-700 (matches Tailwind `primary`) */
+  --gold: #d69e2e;
+
+  /* Surface + border palette */
+  --bg-elevated: #ffffff;
+  --bg-subtle: #f3f2ea;
+  --border-subtle: #e7e5dc;
+  --border-strong: #d6d3c7;
+
+  /* Text palette */
+  --text-primary: #0b1220;
+  --text-muted: #475569;
+  --text-subtle: #94a3b8;
+  --text-inverted: #f8fafc;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --foreground-secondary: #d4d7da;
+    /* Dark theme (forest-ink, emerald glow) */
+    --background: #070d0a;
+
+    /* Text palette */
+    --foreground: #e5e7eb;
+    --foreground-secondary: #a3b0c2;
+
+    /* Accent */
+    --primary-color: #047857;
+    --gold: #d69e2e;
+
+    --bg-elevated: #0b1410;
+    --bg-subtle: #070d0a;
+    --border-subtle: #163026;
+    --border-strong: #24513d;
+
+    --text-primary: #e5e7eb;
+    --text-muted: #a3b0c2;
+    --text-subtle: #64748b;
+    --text-inverted: #020617;
   }
 }
 
@@ -24,7 +58,24 @@
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
+  background-image:
+    radial-gradient(
+      1100px 700px at 50% -220px,
+      rgba(46, 255, 138, 0.14),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 600px at 100% 0%,
+      rgba(255, 215, 0, 0.1),
+      transparent 55%
+    ),
+    radial-gradient(
+      900px 700px at 0% 30%,
+      rgba(46, 255, 138, 0.08),
+      transparent 55%
+    );
+  background-attachment: fixed;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -38,10 +89,7 @@ body {
   src: url("/fonts/NanumPenScript.woff2") format("woff2");
 }
 
-body {
-  background-color: var(--background);
-  color: var(--foreground);
-}
+/* (Body styles are defined above) */
 
 .backdrop-blur {
   -webkit-backdrop-filter: blur(3px);
@@ -64,7 +112,8 @@ code {
 code .line::before {
   content: counter(step);
   counter-increment: step;
-  @apply mr-8 inline-block w-4 text-right text-text-secondary;
+  @apply mr-8 inline-block w-4 text-right;
+  color: var(--foreground-secondary);
 }
 
 .mask {
@@ -73,8 +122,8 @@ code .line::before {
 
 a {
   @apply scroll-my-24 transition-all;
-  color: var(--primary-color);
-  text-decoration-color: var(--primary-color);
+  color: inherit;
+  text-decoration-color: currentColor;
 }
 
 .anchor-link {

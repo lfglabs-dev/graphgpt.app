@@ -2,6 +2,7 @@ import clsx from "clsx";
 import Image, { ImageProps } from "next/image";
 import Link from "next/link";
 import React from "react";
+import { siteConfig } from "../siteConfig";
 
 export default function slugify(str: string) {
   return str
@@ -20,10 +21,7 @@ function CustomHeading(props: any) {
     `h${props.level}`,
     {
       id: slug,
-      className: clsx(
-        "scroll-mt-36 md:scroll-mt-24 inline-flex",
-        props.className
-      ),
+      className: clsx("scroll-mt-36 md:scroll-mt-24 flex", props.className),
     },
     [
       React.createElement("a", {
@@ -38,7 +36,7 @@ function CustomHeading(props: any) {
 
 export const H1 = ({ children }: React.HTMLProps<HTMLHeadingElement>) => (
   <CustomHeading
-    className="text-3xl font-bold normal-case tracking-tight text-text-secondary-dark sm:text-4xl dark:text-gray-50"
+    className="text-3xl font-bold tracking-tighter text-[var(--foreground)] opacity-90 sm:text-4xl"
     level={1}
   >
     {children}
@@ -47,7 +45,7 @@ export const H1 = ({ children }: React.HTMLProps<HTMLHeadingElement>) => (
 
 export const H2 = ({ children }: React.HTMLProps<HTMLHeadingElement>) => (
   <CustomHeading
-    className="mb-4 text-lg font-semibold normal-case tracking-tight text-text-secondary-dark dark:text-gray-50"
+    className="mt-10 mb-4 text-3xl font-bold tracking-tighter text-[var(--foreground)] opacity-90"
     level={2}
   >
     {children}
@@ -56,7 +54,7 @@ export const H2 = ({ children }: React.HTMLProps<HTMLHeadingElement>) => (
 
 export const H3 = ({ children }: React.HTMLProps<HTMLHeadingElement>) => (
   <CustomHeading
-    className="mb-2 font-semibold normal-case tracking-tight text-text-secondary-dark dark:text-gray-50"
+    className="mt-6 mb-3 text-2xl font-bold tracking-tighter text-[var(--foreground)] opacity-90"
     level={3}
   >
     {children}
@@ -86,9 +84,12 @@ export const P = (props: React.HTMLProps<HTMLParagraphElement>) => {
     return (
       <figure className="mb-8">
         {React.cloneElement(imgEl, {
-          className: clsx(imgEl.props?.className, "mx-auto"),
+          className: clsx(
+            imgEl.props?.className,
+            "mx-auto text-[var(--foreground)]"
+          ),
         })}
-        <figcaption className="mt-2 text-center italic text-text-secondary">
+        <figcaption className="mt-2 text-center italic text-[var(--text-muted)]">
           {emEl.props.children}
         </figcaption>
       </figure>
@@ -98,10 +99,7 @@ export const P = (props: React.HTMLProps<HTMLParagraphElement>) => {
   return (
     <p
       {...rest}
-      className={clsx(
-        "dark:text-secondary-light mb-8 leading-7 text-text-secondary",
-        className
-      )}
+      className={clsx("mb-4 leading-7 text-[var(--foreground)]", className)}
     >
       {children}
     </p>
@@ -110,16 +108,13 @@ export const P = (props: React.HTMLProps<HTMLParagraphElement>) => {
 
 export const Ul = (props: React.HTMLAttributes<HTMLUListElement>) => (
   <ul
-    className="dark:text-secondary-light mb-10 ml-[30px] list-['–__'] space-y-1 leading-8 text-text-secondary"
+    className="mb-10 ml-[30px] list-['–__'] space-y-4 leading-8 text-[var(--foreground-secondary)]"
     {...props}
   />
 );
 
 export const Bold = (props: React.HTMLAttributes<HTMLSpanElement>) => (
-  <span
-    className="font-semibold text-text-secondary-dark dark:text-gray-50"
-    {...props}
-  />
+  <span className="font-bold text-[var(--foreground)]" {...props} />
 );
 
 export function CustomLink(props: any) {
@@ -147,7 +142,7 @@ export const BlogEntry = ({
   children,
   title,
   description,
-  author = "ReLens AI",
+  author = siteConfig.name,
 }: {
   date: string;
   children: any;
@@ -168,16 +163,16 @@ export const BlogEntry = ({
     dateModified: date,
     publisher: {
       "@type": "Organization",
-      name: "ReLens AI",
+      name: siteConfig.name,
       logo: {
         "@type": "ImageObject",
-        url: "https://relens.ai/relens/logo-relens.png",
+        url: `${siteConfig.url}/logo.svg`,
       },
     },
   };
 
   return (
-    <article className="relative my-20 flex flex-col justify-center gap-x-14 border-b border-light md:flex-row dark:border-gray-800">
+    <article className="relative my-20 flex flex-col justify-center gap-x-14 border-b border-[var(--border-subtle)] md:flex-row">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostSchema) }}

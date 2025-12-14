@@ -6,20 +6,18 @@ import { getBlogPosts } from "../lib/blog";
 import { siteConfig } from "../siteConfig";
 
 export const metadata: Metadata = {
-  title: "Blog - ReLens",
+  title: `Blog - ${siteConfig.name}`,
   description:
     "Discover insights on AI, generative search, content strategy, and the future of digital marketing. Stay ahead with expert analysis and practical guides.",
   keywords: [
     "AI",
     "Generative Search",
-    "Artificial Intelligence",
-    "ReLens",
-    "AI visibility",
-    "AI tracking",
-    "brand monitoring",
-    "AI SEO",
-    "AEO",
-    "GEO",
+    "Minecraft",
+    "Minecraft plugin",
+    "Oraxen",
+    "custom items",
+    "custom blocks",
+    "resource pack",
   ],
   alternates: {
     canonical: `${siteConfig.url}/blog`,
@@ -33,10 +31,10 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     images: [
       {
-        url: `${siteConfig.url}/images/preview.png`,
+        url: `${siteConfig.url}/logo_lowres.png`,
         width: 1200,
         height: 630,
-        alt: "ReLens AI - Get Your Product Mentioned by LLMs",
+        alt: `${siteConfig.name} - Custom Items & Blocks for Minecraft`,
       },
     ],
   },
@@ -62,7 +60,7 @@ const blogPageJsonLd = {
     url: siteConfig.url,
     logo: {
       "@type": "ImageObject",
-      url: `${siteConfig.url}/relens/logo-relens.png`,
+      url: `${siteConfig.url}/logo.svg`,
     },
   },
 };
@@ -79,7 +77,6 @@ export default async function BlogPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPageJsonLd) }}
       />
       <div id="main-content" className="mx-auto max-w-7xl px-4 py-8">
-        {/* Page Header - Similar to Pricing */}
         <header
           aria-labelledby="blog-title"
           className="mb-16 animate-slide-up-fade"
@@ -91,11 +88,11 @@ export default async function BlogPage() {
           <Badge>Blog</Badge>
           <h1
             id="blog-title"
-            className="mt-2 inline-block bg-gradient-to-br from-[var(--foreground)] to-[var(--foreground-secondary)] bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-6xl md:text-6xl dark:from-gray-50 dark:to-gray-300"
+            className="mt-2 inline-block bg-gradient-to-br from-[var(--foreground)] to-[var(--foreground-secondary)] bg-clip-text py-2 text-4xl font-bold tracking-tighter text-transparent sm:text-6xl md:text-6xl"
           >
             {siteConfig.blogTitle}
           </h1>
-          <p className="text-secondary-dark dark:text-secondary-light mt-6 max-w-2xl text-lg">
+          <p className="mt-6 max-w-2xl text-lg text-[var(--foreground-secondary)]">
             {siteConfig.blogDescription}
           </p>
         </header>
